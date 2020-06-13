@@ -28,6 +28,7 @@
     "mongoose": "^5.0.12",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "react-confirm-alert": "^2.6.1",
     "redux-devtools-extension": "^2.13.8",
     "validator": "^9.4.1"
   },

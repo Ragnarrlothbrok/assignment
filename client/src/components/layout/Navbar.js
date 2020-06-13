@@ -11,18 +11,18 @@ class Navbar extends Component {
   }
 
   render() {
-    const { isAuthenticated } = this.props.auth;
+    const { isAuthenticated, user } = this.props.auth;
 
     const authLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
           <Link className="nav-link" to="/dashboard">
-            Dashboard
+            About
           </Link>
         </li>
         <li className="nav-item">
           <a
-            href="_blank"
+            href="#"
             onClick={this.onLogoutClick.bind(this)}
             className="nav-link"
           >
@@ -34,6 +34,17 @@ class Navbar extends Component {
 
     const guestLinks = (
       <ul className="navbar-nav ml-auto">
+        <li className="nav-item">
+          <Link
+            className="nav-link"
+            to="/dashboard"
+            onClick={() => {
+              window.alert("You have to login first.");
+            }}
+          >
+            About
+          </Link>
+        </li>
         <li className="nav-item">
           <Link className="nav-link" to="/register">
             Sign Up
@@ -53,6 +64,7 @@ class Navbar extends Component {
           <Link className="navbar-brand" to="/">
             Home
           </Link>
+
           <button
             className="navbar-toggler"
             type="button"
@@ -63,7 +75,6 @@ class Navbar extends Component {
           </button>
 
           <div className="collapse navbar-collapse" id="mobile-nav">
-            <ul className="navbar-nav mr-auto"></ul>
             {isAuthenticated ? authLinks : guestLinks}
           </div>
         </div>
