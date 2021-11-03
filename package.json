@@ -30,7 +30,7 @@
     "passport-jwt": "^4.0.0",
     "react-confirm-alert": "^2.6.1",
     "redux-devtools-extension": "^2.13.8",
-    "validator": "^9.4.1"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "nodemon": "^1.17.3"
